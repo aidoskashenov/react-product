@@ -2,6 +2,7 @@ import React, { Fragment } from "react";
 
 import { ProductTable } from "./ProductTable";
 import { SearchBar } from "./SearchBar";
+import api from 'api'
 
 export class FilterableProductTable extends React.Component {
   state = {
@@ -14,9 +15,7 @@ export class FilterableProductTable extends React.Component {
       "https://my-json-server.typicode.com/Claim-Academy-JS/products/products"
     );
 
-
-
-    this.setState({ products: await res.json()});
+    this.setState({ products: await res.json() });
   }
 
   render() {
